@@ -1,4 +1,4 @@
-# CDrawCircleDlg 클래스 API 레퍼런스
+# CDrawCircleDlg 클래스 레퍼런스
 
 세 점을 지나는 원을 계산하고 그리는 애플리케이션입니다.
 
