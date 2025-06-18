@@ -2,6 +2,8 @@
 
 세 점을 지나는 원을 계산하고 그리는 애플리케이션입니다.
 
+![DrawCircle](https://github.com/user-attachments/assets/5e1b0ba4-b1b9-4fab-83ef-0dc4fec9ef86)
+
 ## 1. 주요 멤버 변수
 
 ### GDI+ 및 드로잉 관련
@@ -121,13 +123,13 @@ Windows 메시지나 컨트롤 알림에 대한 응답으로 MFC 프레임워크
 
 ---
 
-### `void OnEnChangeEdit...()`
-반지름, 두께, 정밀도 Edit Control의 내용이 변경될 때마다 호출됨. `UpdateData(TRUE)`로 값을 멤버 변수에 반영하고, `InvalidateRect`를 호출하여 화면을 실시간으로 갱신함.
+### `void OnEnChangeEditPointRadius()`
+반지름 Edit Control의 내용이 변경될 때마다 호출됨. `UpdateData(TRUE)`로 값을 멤버 변수에 반영하고, `InvalidateRect`를 호출하여 화면을 실시간으로 갱신함.
 
 ---
 
-### `afx_msg LRESULT OnUpdateCoords(WPARAM, LPARAM)`
-작업 스레드가 보낸 사용자 정의 메시지 `WM_UPDATE_COORDS`를 처리함. UI 스레드에서 `UpdateCoordinateLabels`를 안전하게 호출하는 역할을 함.
+### `void OnEnChangeEditMainThickness()`
+두께 Edit Control의 내용이 변경될 때마다 호출됨. `UpdateData(TRUE)`로 값을 멤버 변수에 반영하고, `InvalidateRect`를 호출하여 화면을 실시간으로 갱신함.
 
 ---
 ### 스레드 함수
