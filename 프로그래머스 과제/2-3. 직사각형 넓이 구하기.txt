@@ -1,0 +1,31 @@
+2-3. 직사각형 넓이 구하기
+
+#include <string>
+#include <vector>
+#include <algorithm>
+
+
+using namespace std;
+
+int solution(vector<vector<int>> dots) {
+    int answer = 0;
+    
+    int minX = dots[0][0];
+    int maxX = dots[0][0];
+    int minY = dots[0][1];
+    int maxY = dots[0][1];
+    
+    for (int i = 1; i < dots.size(); i++) {
+        minX = std::min(minX, dots[i][0]);
+        maxX = std::max(maxX, dots[i][0]);
+        minY = std::min(minY, dots[i][1]);
+        maxY = std::max(maxY, dots[i][1]);
+    }
+    
+    int width = maxX - minX;
+    int height = maxY - minY;
+    
+    answer = width * height;
+    
+    return answer;
+}

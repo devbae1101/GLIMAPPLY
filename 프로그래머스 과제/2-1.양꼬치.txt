@@ -1,0 +1,17 @@
+2-1.양꼬치
+
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(int n, int k) {
+    int freeDrink = n / 10;
+    int drinkCost = (k - freeDrink) * 2'000;
+    
+    int lambCost = n * 12'000;
+        
+    int answer = drinkCost + lambCost;
+    
+    return answer;
+}

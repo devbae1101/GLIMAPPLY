@@ -1,0 +1,27 @@
+2-4. 빈 배열에 추가, 삭제하기
+
+#include <string>
+#include <vector>
+
+using namespace std;
+
+vector<int> solution(vector<int> arr, vector<bool> flag) {
+    vector<int> answer;
+    
+    for (int i = 0; i < arr.size(); i++) {
+        if (flag[i] == true) {
+            int numAdd = arr[i];
+            int count = numAdd * 2;
+            for (int j = 0; j < count; j++) {
+                answer.push_back(numAdd);
+            }
+        }
+        else { // flag[i] == false
+            int numRemove = arr[i];
+            for (int j = 0; j < numRemove; j++) {
+                answer.pop_back();
+            }
+        }
+    }
+    return answer;
+}
